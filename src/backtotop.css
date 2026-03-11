@@ -1,0 +1,27 @@
+.back-to-top {
+  position: fixed;
+  right: 4rem;                     /* center horizontally */
+  bottom: 12rem;                  /* raise above bottom */
+  transform: translateX(-50%);   /* true centering */
+
+  padding: 0.5rem 1.25rem;       /* a bit wider for pill shape */
+  border-radius: 9999px;         /* fully rounded */
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+  background-color: #fff;
+  border: 2px solid #000;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.1s ease;
+  z-index: 1000;
+}
+
+.back-to-top:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.back-to-top:active {
+  transform: translateX(-50%) scale(0.95); /* keep centered when pressed */
+}

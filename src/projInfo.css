@@ -1,0 +1,142 @@
+/* ----------  GLOBAL LAYOUT  ---------- */
+
+.page-container {
+  max-width: 1350px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  border-radius: 10px;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* ----------  TYPOGRAPHY  ---------- */
+
+.title {
+  font-family: 'Roboto', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 0 0 1.2rem 0;
+  text-align: left;
+}
+
+.introduction {
+  margin: 0 0 1rem 0;
+  text-align: justify;
+  background: radial-gradient(ellipse at center, #1a1a2e 0%, #1a1a2e 52%, transparent 100%);
+  padding: 2.5rem;
+}
+
+.introduction p {
+  margin: 0 0 1rem 0;
+}
+
+.introduction + .title,
+.introduction + .project-details-row,
+.project-info + .title,
+.project-info + .introduction {
+  margin-top: 2rem;
+}
+
+.technical-info {
+  background: radial-gradient(ellipse at center, #1a1a2e 0%, #1a1a2e 52%, transparent 100%);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.technical-info p {
+  margin: 0 0 1rem 0;
+  text-align: justify;
+}
+
+.media-section {
+  background: radial-gradient(ellipse at center, #1a1a2e 0%, #1a1a2e 52%, transparent 100%);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+video,
+.media-section img,
+.project-details-row img {
+  border: 2px solid rgba(100, 255, 218, 0.3);
+  border-radius: 8px;
+}
+
+/* ----------  PROJECT DETAILS ROW  ---------- */
+
+.project-details-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 20px;
+  margin-bottom: 1.5rem;
+  margin-top: 5rem;
+}
+
+.project-info {
+  flex: 1 1 40%;
+  display: flex;
+  flex-direction: column;
+  background: radial-gradient(ellipse at center, #1a1a2e 0%, #1a1a2e 52%, transparent 100%);
+  padding: 2.5rem;
+}
+
+.project-info h3 {
+  margin: 0 0 0.5rem;
+  text-align: center;
+}
+
+.project-info li {
+  list-style: none;
+  margin-bottom: 2rem;
+  margin-right: 5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.project-info li > strong {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.project-info h2 {
+  margin: 0 0 1.5rem;
+  text-align: center;
+}
+
+.project-info ul {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  padding-left: 1.2rem;
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.4;
+  text-align: left;
+}
+
+.project-info li strong {
+  font-weight: bold;
+}
+
+/* ----------  MOBILE / SMALL SCREEN  ---------- */
+
+@media (max-width: 600px) {
+  .page-container {
+    border-radius: 0;
+    padding: 15px;
+  }
+
+  .project-details-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .project-info {
+    flex: 1 1 100%;
+    width: 100%;
+    margin-left: 0;
+    height: auto;
+  }
+}

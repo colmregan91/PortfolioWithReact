@@ -1,0 +1,191 @@
+[
+  {
+    "id": 1,
+    "pageIntro" : "",
+    "title": "Blok Games",
+    "introText" : "Blok Games Intro",
+    "infoText" : "Blok Games Info",
+  "image": ["BionicBlitzMainImg.jpg","BionicBlitzMainImg.jpg","BionicBlitzMainImg.jpg"],
+    "releasedate" : "",
+    "trailer" : "",
+    "gameplay" : "",
+    "steamlink" : "",
+    "githublink" : "",
+    "techused" : "",
+        "role" : "API integration, front end data display. I did not design or create the graphics."
+
+  },
+  {
+    "id": 2,
+    "pageIntro" : "During my time at Bloktopia, I worked on a range of features, with a strong focus on networking and bug fixing using Photon Fusion. & One of my main responsibilities was developing the Crypto Arcade, a hub that brought together a mix of purchased and original hyper-casual games designed for the metaverse. & The arcade launched with three titles: Bull Run, Crypto Rush, and Crypto Connect.",
+    "title":   ["Bull Run", "Crypto Connect (Hex Game)", "Crypto Rush"],
+    "introText" : ["For Bull Run, I procured a Unity Asset Store game bundle, carefully dissected its core systems, and repurposed them to fit our project’s unique requirements. By tailoring and extending the extracted components, I streamlined development while ensuring the final product aligned with the project’s vision and specifications. & The original game bundle is available here :[LINK] https://assetstore.unity.com/packages/templates/packs/downhill-ride-game-template-232870?aid=1100l9P3D&utm_campaign=unity_affiliate&utm_medium=affiliate&utm_source=partnerize-linkmaker",
+     "Crypto Connect is a tile-based puzzle game where players use their mouse to connect tiles and score points. Similar to Bull Run, it started as a Unity Asset Store game bundle but required significantly less modification. We adapted it to be playable as a single-player experience in its own dedicated, non-networked scene. & The original game bundle is available here : [LINK] https://assetstore.unity.com/packages/templates/packs/connect-game-template-232880?aid=1100l9P3D&utm_campaign=unity_affiliate&utm_medium=affiliate&utm_source=partnerize-linkmaker", 
+     "Crypto Rush is a fully original game where I had complete creative control over the design, gameplay, and development. & The accompanying video showcases the game from two perspectives: the player actively engaging with the game, and an observer watching in real time. This highlights the custom networking system I implemented, which allows players’ scores and progress to be viewed dynamically by others."],
+  
+       "infoText" : ["I implemented bespoke player characters, refined scoring systems, and rebuilt the game mechanics from the ground up to achieve the desired gameplay experience. In addition, I developed a fully custom networking layer using Photon Fusion, enabling players to view one another’s scores dynamically when they came into proximity.",
+        "The main challenge with this game bundle was condensing all gameplay into a single scene and importing it into Bloktopia as a dedicated, non-networked experience. I added custom save and load functionality and applied a Bloktopia-themed art design to give it a cohesive look. & Gameplay revolves around connecting tiles: the more tiles a player links, the higher their score. Connected tiles are replaced with higher-value tiles, making them more challenging to match but yielding greater rewards. The game ends when no valid tile connections remain on the board.", 
+        "This is a time-based game where players must sort different coins into the correct wallets: Bitcoin appears on the left, and Ethereum on the right. Players are presented with a randomly ordered list of coins and must press left for Bitcoin and right for Ethereum, aiming to sort as many coins as possible before the timer runs out. & I implemented a custom networking system that allows other users to enter the vicinity of an ongoing game and watch the coins being sorted in real time. This was achieved with minimal network traffic, leveraging our custom networking architecture to synchronize in-game updates efficiently."],
+    "image": ["bullrun.mp4","HexVid.mp4","cryptoRush.mp4"],
+        "releasedate" : "15/04/24",
+    "trailer" : "",
+    "gameplay" : "",
+        "steamlink" : "",
+    "githublink" : "",
+    "techused" : "Unity, Unity Asset Store Game bundles",
+        "role" : "unpacking from from original bundle, modifications and integration."
+
+  },
+
+  {
+    "id": 3,
+    "pageIntro" : "The Token Ticker System was a core feature of the Bloktopia metaverse, giving users real-time access to cryptocurrency prices directly inside the virtual world. It delivered up-to-the-minute updates on a wide range of tokens, with tools to filter and sort coins by daily gainers and losers. & Powered by CoinMarketCap and DexTools APIs, the system ensured that the data was always accurate, current, and relevant for users exploring the metaverse.",
+    "title": "Token Tickers",
+    "introText" : "",
+  
+    "infoText" : "The video showcases the different types of tickers integrated into the system. These include single-display tickers for tracking individual coins, horizontally scrolling tickers that display multiple coins at once, and a top 10 coins feed powered by the CoinMarketCap API. There’s also an interactive display where users can check the daily top gainers and losers for any coin of their choice. & Across the metaverse, these tickers are placed in key locations so users can quickly see the price of their favorite coins, compare performance between different tokens, and keep up with the biggest movers on a particular chain.",
+   "image": ["scrollticker.png","horztickers.png","topten.png","gainers.png"],
+        "releasedate" : "10/11/23",
+    "trailer" : "",
+    "gameplay" : "tickers.mp4",
+        "steamlink" : "",
+    "githublink" : "",
+    "techused" : "Unity, CoinMarkeyCap API, Dextools API",
+    "role" : "API integration, front end data display and prefab creation. I did not design or create the graphics."
+    
+  },
+
+    {
+    "id": 4,
+    "pageIntro" : "BlokBuster is a fast-paced, multiplayer trivia experience designed to bring people together from across the globe. Supporting up to 800 participants in a single session, the game challenges players to think quickly and act even faster. Each round presents a multiple-choice question, and players must race to the zone that corresponds to their chosen answer before time runs out. Choosing the wrong zone means elimination, while correct answers keep you in the competition. & The rounds continue until no players remain or the final question is answered. Those who survive to the end of the last round are crowned winners.",
+    "title": "BlokBuster",
+    "introText" : "",
+    "infoText" : "The game is built on a hybrid architecture that combines Photon Fusion and Azure Hubs to deliver a seamless large-scale multiplayer experience. Photon Fusion is responsible for handling real-time networking tasks, such as user interactions, round progression, and the distribution of game data from the host machine (master client) to all participants in the session. & Complementing this, Azure Hubs ensures reliable player grouping and state management across the entire player base. Whenever a player updates their state locally, the change is sent to Azure Hubs, where it is processed and passed on to the host. The host then distributes the updated information back to all connected players, ensuring that every state is synchronized and consistent throughout the game. & This layered approach provides both performance and stability, allowing hundreds of players to interact in real time without compromising on responsiveness or accuracy.",
+  "image": ["bbuster1.png","bbuster2.png","bbuster3.png","bbuster4.png"],
+        "releasedate" : "10/02/25",
+    "trailer" : "",
+    "gameplay" : "bbuster.mp4",
+        "steamlink" : "",
+    "githublink" : "",
+    "techused" : "Unity, Photon Fusion, Azure SignalR Service",
+        "role" : "API integration, front end data display. I did not design or create the graphics."
+    },
+    {
+    "id": 5,
+    "pageIntro" : "Bionic Blitz is my first game, a fast-paced and chaotic arcade experience built to run across multiple platforms. You play as OddBot, a playful and mischievous robot tasked with draining power from enemy entities while avoiding or disabling others that chase you on sight. & The game features unlockable power-ups, online leaderboards, and a progressively challenging set of enemies, each with their own strengths, weaknesses, and attack patterns. I designed it to combine quick reflexes with strategic decision-making, creating a gameplay loop that rewards both planning and fast action. & Bionic Blitz is also multilingual and cross-platform, with a mobile version that includes ads. Developing this game gave me hands-on experience with core game design, balancing mechanics, and implementing features that keep players engaged.",
+    "title": "Bionic Blitz",
+    "introText" : "",
+    "infoText" : "Bionic Blitz was built in Unity, using C# for all core gameplay systems, including player controls, enemy AI, power-ups, and scoring mechanics. The game is fully cross-platform, running on PC and mobile, and supports multilingual localization. I implemented multiple enemy types with distinct behaviors and attack patterns, as well as unlockable power-ups that modify gameplay dynamics. & Online features include leaderboards to track player scores, while the mobile version integrates ads for monetization. Development focused on creating a fast, responsive, and scalable gameplay loop, balancing enemy difficulty, and ensuring smooth performance across platforms. Working on this project gave me practical experience in programming, AI design, cross-platform optimization, and building engaging, replayable systems.",
+"image": ["bb2.jpg","bb3.png","bb4.png","bb9.png","bb6.png","bb7.png","bb8.png","bb6.png"],
+        "releasedate" : "27/03/2019",
+    "trailer" : "bbTrailer.mp4",
+    "gameplay" : "bbGameplay.mp4",
+        "steamlink" : "https://store.steampowered.com/app/1029020/BionicBlitz/",
+    "githublink" : "",
+    "techused" : "",
+        "role" : "Full Development of the game.  I did not design or create the graphics."
+
+  }
+  ,
+  {
+    "id": 6,
+    "pageIntro" : "The Chicken and the Fox is the first of a series of childrens books. It is a joint collaboration between TopBox Studio and promising children's book author, Randol Taylor. & It is a multi-lingual children's book that weaves an informative narrative with an engaging story through an interactive journey that combines fun with learning, offering a delightful experience for young readers. & This app is seperated into 2 different projects.  An uploader project was created for storing assets and creating the actual content for each book. This project ensures that the art and content are kept separate from the main project, facilitating easier content management and enabling the production of multiple books using the same system.",
+    "title":   ["Taylors Tales", "Taylors Tales Uploader"],
+    "introText" : ["The main project is designed to manage and present each book in Unity. It processes a list of asset bundles for the specific book the user wants to read. & Below is a small snippet showcasing the main features of the book. There are 25 pages in total each with their own set of facts and interactables. The target platform for the project is Android and I phone.",
+     "The uploader project contains custom editor code that generates asset bundles from scene layouts, text elements and audio data.  These assets are stored in the persistent data folder where the main project reads them from.  Before the book is released, these assets will be placed on Azure Blob Storage."],
+       "infoText" : ["", ""],
+    "image": ["candfVid.mp4","BionicBlitzMainImg.jpg"],
+        "releasedate" : "",
+    "trailer" : "",
+    "gameplay" : "",
+        "steamlink" : "",
+    "githublink" : "",
+    "techused" : "",
+        "role" : "Full development of both projects. I did not design or create the graphics."
+
+  },
+    {
+    "id": 7,
+    "pageIntro" : "Crosswaves Intro",
+    "title": "Crosswaves",
+    "introText" : "",
+    "infoText" : "Crosswaves Info",
+  "image": "",
+    "releasedate" : "",
+    "trailer" : "",
+    "gameplay" : "",
+    "steamlink" : "",
+    "githublink" : "",
+    "techused" : "",
+        "role" : ""
+
+  },
+    {
+    "id": 8,
+    "pageIntro" : "Macro Tracker info",
+    "title": "Macro Tracker",
+    "introText" : "",
+    "infoText" : "Macro Tracker Info",
+  "image": ["BionicBlitzMainImg.jpg","BionicBlitzMainImg.jpg","BionicBlitzMainImg.jpg"],
+    "releasedate" : "",
+    "trailer" : "",
+    "gameplay" : "",
+    "steamlink" : "",
+    "githublink" : "",
+    "techused" : "",
+        "role" : ""
+
+  },
+  
+    {
+    "id": 9,
+    "pageIntro" : "Trick or Treat was to be the first of a series of festive themed local/online multiplayer shooter games. The setting is Halloween night and based around the concept of fireworks and eggs over guns and grenades. The goal is to destroy the other teams base, by throwing eggs at it.",
+    "title": "Trick or Treat",
+    "introText" : "",
+    "infoText" : "This game contains a fully functioning 3D Ragdoll system and a complex pooling system. The architecture follows a state machine based interface which implements game state as well as Player and Ragdoll states. & The video below shows a clip of the local multiplayer shooting with the ragdoll physics in effect. & This game was abandoned due to the Covid-19 Pandemic and is currently archived.  I fully intend to complete this game at some point in the near future.",
+  "image": "",
+    "releasedate" : "",
+    "trailer" : "",
+    "gameplay" : "instaTorT.mp4",
+    "steamlink" : "",
+    "githublink" : "",
+    "techused" : "",
+        "role" : ""
+
+  },
+    {
+    "id": 10,
+    "pageIntro" : "This was a project I worked worked on solo during the Covid 19 Pandemic. It is inspired by my favorite game as a child : Street Fighter.",
+    "title": "3D Street Fighter",
+    "introText" : "",
+    "infoText" : "This game uses enemy and character scripts which both inherit from an interface named IEntity. The IEntity interface must implement 3 other interfaces named IAnimate, IControllable and IAttack. & This was a deep dive into interface based architecture. The choice to use an interface of interfaces makes it extremely easy to implement new features and develop enemy AI and player characters alongside each other with a very similar structure. This allows for easy bug fixing and scalability. & The project was abandoned when i was hired as a Junior Developer at Mesmerise Global Limited, my first ever professional developing job.",
+  "image": "",
+    "releasedate" : "",
+    "trailer" : "",
+    "gameplay" : "hacnNew.mp4",
+    "steamlink" : "",
+    "githublink" : "",
+    "techused" : "",
+        "role" : ""
+
+  },
+    {
+    "id": 11,
+    "pageIntro" : "",
+    "title": "CoachCubeAI",
+    "introText" : "",
+    "infoText" : "",
+  "image": [],
+    "releasedate" : "",
+    "trailer" : "CoachCubeExplainerVideo.mp4",
+    "gameplay" : "",
+    "steamlink" : "",
+    "githublink" : "",
+    "techused" : "",
+        "role" : ""
+
+  }
+
+]
+
+

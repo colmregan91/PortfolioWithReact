@@ -1,0 +1,90 @@
+[
+    {
+    "id": 11,
+    "projectCount" : 1,
+    "title": "CoachCubeAI",
+    "image": "COACHCUBEAI_ICON_DARK.png",
+    "filter": "CoachCubeAI",
+      "PageRoute": "/coachcube"
+  },
+  {
+    "id": 2,
+    "projectCount" : 3,
+    "title": "Blok Arcade",
+    "image": "blokarcade.jpg",
+    "filter": "Bloktopia",
+      "PageRoute": "/blokArcade"
+  },
+
+    {
+    "id": 3,
+    "projectCount" : 1,
+    "title": "Token Tickers",
+    "image": "tokentickerslogo.jpg",
+    "filter": "Bloktopia",
+      "PageRoute": "/tokentickers"
+  },
+
+      {
+    "id": 4,
+    "projectCount" : 1,
+    "title": "Blokbuster",
+    "image": "BlokBusterLogo.jpg",
+    "filter": "Bloktopia",
+      "PageRoute": "/blokbuster"
+  },
+        {
+    "id": 5,
+    "projectCount" : 1,
+    "title": "Bionic Blitz",
+    "image": "BionicBlitzMainImg.jpg",
+    "filter": "TopBox Studio (indie)",
+      "PageRoute": "/bionicblitz"
+  }
+  ,
+        {
+    "id": 6,
+    "projectCount" : 2,
+    "title": "Taylors Tales",
+    "image": "candf.png",
+    "filter": "TopBox Studio (indie)",
+      "PageRoute": "/taylorstales"
+  } ,
+        {
+    "id": 7,
+    "projectCount" : 1,
+    "title": "Crosswaves",
+    "image": "crosswaves4.png",
+    "filter": "Solo Projects",
+      "PageRoute": "/crosswaves"
+  },
+        {
+    "id": 8,
+    "projectCount" : 1,
+    "title": "Macro Tracker",
+    "image": "candf.png",
+    "filter": "Solo Projects",
+      "PageRoute": "/macrotracker"
+  }
+  ,
+    
+        {
+    "id": 9,
+    "projectCount" : 1,
+    "title": "Trick or Treat",
+    "image": "tortimage3.png",
+    "filter": "Archived",
+      "PageRoute": "/trickortreat"
+  },
+        {
+    "id": 10,
+    "projectCount" : 1,
+    "title": "3D Street Fighter",
+    "image": "streetfighter.png",
+    "filter": "Archived",
+      "PageRoute": "/3dstreetfighter"
+  }
+
+]
+
+
