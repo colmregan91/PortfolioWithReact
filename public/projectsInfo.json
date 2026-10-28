@@ -1,191 +1,293 @@
 [
   {
     "id": 1,
-    "pageIntro" : "",
+    "pageIntro": "",
     "title": "Blok Games",
-    "introText" : "Blok Games Intro",
-    "infoText" : "Blok Games Info",
-  "image": ["BionicBlitzMainImg.jpg","BionicBlitzMainImg.jpg","BionicBlitzMainImg.jpg"],
-    "releasedate" : "",
-    "trailer" : "",
-    "gameplay" : "",
-    "steamlink" : "",
-    "githublink" : "",
-    "techused" : "",
-        "role" : "API integration, front end data display. I did not design or create the graphics."
-
+    "introText": "Blok Games Intro",
+    "infoText": "Blok Games Info",
+    "image": [
+      "BionicBlitzMainImg.jpg",
+      "BionicBlitzMainImg.jpg",
+      "BionicBlitzMainImg.jpg"
+    ],
+    "releasedate": "",
+    "trailer": "",
+    "gameplay": "",
+    "steamlink": "",
+    "githublink": "",
+    "techused": "",
+    "role": "API integration, front end data display. I did not design or create the graphics."
   },
   {
     "id": 2,
-    "pageIntro" : "During my time at Bloktopia, I worked on a range of features, with a strong focus on networking and bug fixing using Photon Fusion. & One of my main responsibilities was developing the Crypto Arcade, a hub that brought together a mix of purchased and original hyper-casual games designed for the metaverse. & The arcade launched with three titles: Bull Run, Crypto Rush, and Crypto Connect.",
-    "title":   ["Bull Run", "Crypto Connect (Hex Game)", "Crypto Rush"],
-    "introText" : ["For Bull Run, I procured a Unity Asset Store game bundle, carefully dissected its core systems, and repurposed them to fit our project’s unique requirements. By tailoring and extending the extracted components, I streamlined development while ensuring the final product aligned with the project’s vision and specifications. & The original game bundle is available here :[LINK] https://assetstore.unity.com/packages/templates/packs/downhill-ride-game-template-232870?aid=1100l9P3D&utm_campaign=unity_affiliate&utm_medium=affiliate&utm_source=partnerize-linkmaker",
-     "Crypto Connect is a tile-based puzzle game where players use their mouse to connect tiles and score points. Similar to Bull Run, it started as a Unity Asset Store game bundle but required significantly less modification. We adapted it to be playable as a single-player experience in its own dedicated, non-networked scene. & The original game bundle is available here : [LINK] https://assetstore.unity.com/packages/templates/packs/connect-game-template-232880?aid=1100l9P3D&utm_campaign=unity_affiliate&utm_medium=affiliate&utm_source=partnerize-linkmaker", 
-     "Crypto Rush is a fully original game where I had complete creative control over the design, gameplay, and development. & The accompanying video showcases the game from two perspectives: the player actively engaging with the game, and an observer watching in real time. This highlights the custom networking system I implemented, which allows players’ scores and progress to be viewed dynamically by others."],
-  
-       "infoText" : ["I implemented bespoke player characters, refined scoring systems, and rebuilt the game mechanics from the ground up to achieve the desired gameplay experience. In addition, I developed a fully custom networking layer using Photon Fusion, enabling players to view one another’s scores dynamically when they came into proximity.",
-        "The main challenge with this game bundle was condensing all gameplay into a single scene and importing it into Bloktopia as a dedicated, non-networked experience. I added custom save and load functionality and applied a Bloktopia-themed art design to give it a cohesive look. & Gameplay revolves around connecting tiles: the more tiles a player links, the higher their score. Connected tiles are replaced with higher-value tiles, making them more challenging to match but yielding greater rewards. The game ends when no valid tile connections remain on the board.", 
-        "This is a time-based game where players must sort different coins into the correct wallets: Bitcoin appears on the left, and Ethereum on the right. Players are presented with a randomly ordered list of coins and must press left for Bitcoin and right for Ethereum, aiming to sort as many coins as possible before the timer runs out. & I implemented a custom networking system that allows other users to enter the vicinity of an ongoing game and watch the coins being sorted in real time. This was achieved with minimal network traffic, leveraging our custom networking architecture to synchronize in-game updates efficiently."],
-    "image": ["bullrun.mp4","HexVid.mp4","cryptoRush.mp4"],
-        "releasedate" : "15/04/24",
-    "trailer" : "",
-    "gameplay" : "",
-        "steamlink" : "",
-    "githublink" : "",
-    "techused" : "Unity, Unity Asset Store Game bundles",
-        "role" : "unpacking from from original bundle, modifications and integration."
-
+    "pageIntro": "At Bloktopia, one of my main responsibilities was building Blok Arcade, a hub of hyper casual games for the metaverse with networking handled through Photon Fusion. & Two of the three launch titles started life as Unity Asset Store bundles that I took apart and rebuilt to fit Bloktopia's world. I designed and built the third, Crypto Rush, from scratch. & Across all three, the networking was the real engineering challenge. I built a custom synchronisation pattern for the arcade that kept traffic low and let players near a game watch scores and progress update in real time.",
+    "title": [
+      "Bull Run",
+      "Crypto Connect (Hex Game)",
+      "Crypto Rush"
+    ],
+    "introText": [
+      "Bull Run started as a Unity Asset Store downhill ride template. I took it apart, kept what was worth keeping and rebuilt the rest to fit what the arcade needed. On a project like this, deciding what to keep and what to throw out is half the work. & You can see the original template here: [LINK] https://assetstore.unity.com/packages/templates/packs/downhill-ride-game-template-232870",
+      "Crypto Connect is a tile based puzzle game where players link tiles with their mouse to score points. It also started life as a Unity Asset Store bundle, but the brief was different this time. I had to strip it down and run it as a single player game in its own scene inside the metaverse, with no networking. & You can see the original template here: [LINK] https://assetstore.unity.com/packages/templates/packs/connect-game-template-232880",
+      "Crypto Rush is the one I owned from start to finish, covering the design, gameplay and networking. The brief was open, so the build was mine to shape. & The video shows the game from two angles: the player mid run, and an observer watching live from somewhere else in the metaverse. That second view is the spectator networking at work."
+    ],
+    "infoText": [
+      "The original template gave me the basic structure. I rebuilt the player characters, the scoring system and the core gameplay loop from scratch to fit the arcade's style. & Like the rest of the arcade, Bull Run uses the custom Photon Fusion spectator networking, so nearby players can watch each other's scores update live.",
+      "The challenge on this one was the integration. I condensed the bundle's gameplay into a single scene and dropped it into Bloktopia without breaking the world around it. I added custom save and load, and reskinned the whole thing in the Bloktopia art direction so it didn't feel like a bolted on asset. & The gameplay loop is simple but well tuned. Linking tiles scores points, and linked tiles upgrade into higher value pieces that are harder to match but pay more. The game ends when no valid connections remain.",
+      "The game is a coin sorting loop against the clock. A randomised stream of Bitcoin and Ethereum coins comes in, and you sort Bitcoin to the left and Ethereum to the right, getting through as many as you can before the timer runs out. It's quick and simple, which is the hyper casual feel the arcade needed. & Crypto Rush pushed the spectator layer furthest, because spectators see every coin being sorted live. The synchronisation only sends what has changed, so network traffic stays low even when several spectators are watching at once."
+    ],
+    "image": [
+      "bullrun.mp4",
+      "HexVid.mp4",
+      "cryptoRush.mp4"
+    ],
+    "releasedate": "",
+    "trailer": "",
+    "gameplay": "",
+    "steamlink": "",
+    "githublink": "",
+    "techused": "Unity & C# & Photon Fusion & Azure Blob Storage & ASP.NET",
+    "role": [
+      "Photon Fusion Networking & Custom Player Systems & Scoring System Rebuild & Bundle Integration & Leaderboard Integration & Azure Blob Storage",
+      "Single Scene Integration & Custom Save/Load & Bloktopia Art Direction & Bundle Integration & Leaderboard Integration & Azure Blob Storage",
+      "Full Game Development & Concept and Design & Custom Spectator Networking & Photon Fusion Networking & Leaderboard Integration & Graphics Product Owner"
+    ]
   },
-
   {
     "id": 3,
-    "pageIntro" : "The Token Ticker System was a core feature of the Bloktopia metaverse, giving users real-time access to cryptocurrency prices directly inside the virtual world. It delivered up-to-the-minute updates on a wide range of tokens, with tools to filter and sort coins by daily gainers and losers. & Powered by CoinMarketCap and DexTools APIs, the system ensured that the data was always accurate, current, and relevant for users exploring the metaverse.",
+    "pageIntro": "The Token Ticker System was a core feature of the Bloktopia metaverse. It gave users live cryptocurrency prices inside the virtual world across a wide range of tokens, with filtering and sorting tools for the day's gainers and losers. & I built the front end for the system. That covered the API integrations with CoinMarketCap and DexTools, and the in world UI that showed the data to users as they moved through the metaverse.",
     "title": "Token Tickers",
-    "introText" : "",
-  
-    "infoText" : "The video showcases the different types of tickers integrated into the system. These include single-display tickers for tracking individual coins, horizontally scrolling tickers that display multiple coins at once, and a top 10 coins feed powered by the CoinMarketCap API. There’s also an interactive display where users can check the daily top gainers and losers for any coin of their choice. & Across the metaverse, these tickers are placed in key locations so users can quickly see the price of their favorite coins, compare performance between different tokens, and keep up with the biggest movers on a particular chain.",
-   "image": ["scrollticker.png","horztickers.png","topten.png","gainers.png"],
-        "releasedate" : "10/11/23",
-    "trailer" : "",
-    "gameplay" : "tickers.mp4",
-        "steamlink" : "",
-    "githublink" : "",
-    "techused" : "Unity, CoinMarkeyCap API, Dextools API",
-    "role" : "API integration, front end data display and prefab creation. I did not design or create the graphics."
-    
+    "introText": "",
+    "infoText": "The video walks through the different ticker types I built. There are single tickers that track one coin, horizontally scrolling tickers that show several coins at once, a top 10 feed from the CoinMarketCap API, and an interactive display where users can pull up the day's top gainers and losers for any coin they choose. & The tickers sit at key spots around the metaverse, so users can check their favourite coins at a glance, compare tokens side by side, or see the biggest movers on a chain without leaving the world. The challenge was bringing together live financial data and an in world UI that had to feel like part of a 3D space rather than something stuck on top of it.",
+    "image": [
+      "scrollticker.png",
+      "horztickers.png",
+      "topten.png",
+      "gainers.png"
+    ],
+    "releasedate": "",
+    "trailer": "",
+    "gameplay": "tickers.mp4",
+    "steamlink": "",
+    "githublink": "",
+    "techused": "Unity & C# & CoinMarketCap API & DexTools API & ASP.NET",
+    "role": "Front End Development & API Integration & In World UI Design & Interactive Modules"
   },
-
-    {
+  {
     "id": 4,
-    "pageIntro" : "BlokBuster is a fast-paced, multiplayer trivia experience designed to bring people together from across the globe. Supporting up to 800 participants in a single session, the game challenges players to think quickly and act even faster. Each round presents a multiple-choice question, and players must race to the zone that corresponds to their chosen answer before time runs out. Choosing the wrong zone means elimination, while correct answers keep you in the competition. & The rounds continue until no players remain or the final question is answered. Those who survive to the end of the last round are crowned winners.",
-    "title": "BlokBuster",
-    "introText" : "",
-    "infoText" : "The game is built on a hybrid architecture that combines Photon Fusion and Azure Hubs to deliver a seamless large-scale multiplayer experience. Photon Fusion is responsible for handling real-time networking tasks, such as user interactions, round progression, and the distribution of game data from the host machine (master client) to all participants in the session. & Complementing this, Azure Hubs ensures reliable player grouping and state management across the entire player base. Whenever a player updates their state locally, the change is sent to Azure Hubs, where it is processed and passed on to the host. The host then distributes the updated information back to all connected players, ensuring that every state is synchronized and consistent throughout the game. & This layered approach provides both performance and stability, allowing hundreds of players to interact in real time without compromising on responsiveness or accuracy.",
-  "image": ["bbuster1.png","bbuster2.png","bbuster3.png","bbuster4.png"],
-        "releasedate" : "10/02/25",
-    "trailer" : "",
-    "gameplay" : "bbuster.mp4",
-        "steamlink" : "",
-    "githublink" : "",
-    "techused" : "Unity, Photon Fusion, Azure SignalR Service",
-        "role" : "API integration, front end data display. I did not design or create the graphics."
-    },
-    {
+    "pageIntro": "Blokbuster is a fast multiplayer trivia game built for crowds, with up to 800 players in a single session. Each round asks a multiple choice question, and players race to the zone that matches their answer before the timer runs out. Pick the wrong zone and you're out. Pick the right one and you go through to the next round. & Rounds continue until either the questions or the players run out, and whoever is still standing at the end wins.",
+    "title": "Blokbuster",
+    "introText": "",
+    "infoText": "Off the shelf networking can't run 800 concurrent players in one session on its own, so the game uses a hybrid setup. Photon Fusion handles the real time gameplay layer, which covers round progression, player movement and sending data from the host to clients. Azure SignalR handles the wider state synchronisation that keeps every player in agreement about what the world looks like. & When a player updates their state locally, the change goes through SignalR to the host, the host reconciles it, and the updated state goes back out to everyone connected. The two layers do different jobs at different scales, and most of the engineering went into getting them to work together cleanly. Match results and session data are saved to Azure Blob Storage at the end of each round. & I built the front end integration for both networking layers. That covered the SignalR client that sends and receives state on the Unity side, the Photon Fusion networking for the gameplay in the arena, and the trivia arena itself. Splitting the work like this is what lets it handle a load that a single networking layer couldn't.",
+    "image": [
+      "bbuster1.png",
+      "bbuster2.png",
+      "bbuster3.png",
+      "bbuster4.png"
+    ],
+    "releasedate": "",
+    "trailer": "",
+    "gameplay": "bbuster.mp4",
+    "steamlink": "",
+    "githublink": "",
+    "techused": "Unity & C# & Photon Fusion & Azure SignalR Service & Azure Blob Storage & ASP.NET & WebSocket & JSON",
+    "role": "Arena Design and Build & Front End SignalR Integration & Photon Fusion Networking & Real Time State Synchronisation & Azure Blob Storage Integration"
+  },
+  {
     "id": 5,
-    "pageIntro" : "Bionic Blitz is my first game, a fast-paced and chaotic arcade experience built to run across multiple platforms. You play as OddBot, a playful and mischievous robot tasked with draining power from enemy entities while avoiding or disabling others that chase you on sight. & The game features unlockable power-ups, online leaderboards, and a progressively challenging set of enemies, each with their own strengths, weaknesses, and attack patterns. I designed it to combine quick reflexes with strategic decision-making, creating a gameplay loop that rewards both planning and fast action. & Bionic Blitz is also multilingual and cross-platform, with a mobile version that includes ads. Developing this game gave me hands-on experience with core game design, balancing mechanics, and implementing features that keep players engaged.",
+    "pageIntro": "Bionic Blitz was my first game, and the project that taught me what game development really involves. In 2017 a friend and I set up Topbox Studio with no studio experience between us. He did the graphics, I did the programming and animation setup, and we worked out the rest as we went. & It's a fast arcade game built for PC and Android. You play as OddBot, a mischievous robot draining power from enemies while dodging or disabling the ones that chase you on sight. It has unlockable power-ups, online leaderboards, multilingual support, and enemies that get harder as you go, each with its own behaviour and attack pattern.",
     "title": "Bionic Blitz",
-    "introText" : "",
-    "infoText" : "Bionic Blitz was built in Unity, using C# for all core gameplay systems, including player controls, enemy AI, power-ups, and scoring mechanics. The game is fully cross-platform, running on PC and mobile, and supports multilingual localization. I implemented multiple enemy types with distinct behaviors and attack patterns, as well as unlockable power-ups that modify gameplay dynamics. & Online features include leaderboards to track player scores, while the mobile version integrates ads for monetization. Development focused on creating a fast, responsive, and scalable gameplay loop, balancing enemy difficulty, and ensuring smooth performance across platforms. Working on this project gave me practical experience in programming, AI design, cross-platform optimization, and building engaging, replayable systems.",
-"image": ["bb2.jpg","bb3.png","bb4.png","bb9.png","bb6.png","bb7.png","bb8.png","bb6.png"],
-        "releasedate" : "27/03/2019",
-    "trailer" : "bbTrailer.mp4",
-    "gameplay" : "bbGameplay.mp4",
-        "steamlink" : "https://store.steampowered.com/app/1029020/BionicBlitz/",
-    "githublink" : "",
-    "techused" : "",
-        "role" : "Full Development of the game.  I did not design or create the graphics."
-
-  }
-  ,
+    "introText": "",
+    "infoText": "I wrote every line of code in Bionic Blitz, including the player controls, enemy AI, power-ups, scoring, localisation, leaderboards and the AdMob integration on the Android build. I also did all the animation setup in Unity. It shipped on Steam and Android. & I'll be honest about this codebase. It's the work of someone who didn't understand architecture yet. The systems are tangled, the patterns are inconsistent, and I'd build it very differently now. I'm including it anyway because what it taught me is worth more than a clean codebase would have been. Finishing it took over a year of nights and weekends with no template to copy, nobody more senior to ask and, since this was 2017, no AI to lean on. Every problem got solved the hard way, through documentation, forums and a lot of hours on Stack Overflow at 2am hoping someone had already hit the same wall. I wouldn't be building Coach Cube the way I do now if I hadn't stuck with Bionic Blitz to the end. & What it taught me about architecture and scope, and about writing code that lasts, has shaped every project I've worked on since.",
+    "image": [
+      "bb2.jpg",
+      "bb3.png",
+      "bb4.png",
+      "bb9.png",
+      "bb6.png",
+      "bb7.png",
+      "bb8.png"
+    ],
+    "releasedate": "27/03/2019",
+    "trailer": "bbTrailer.mp4",
+    "gameplay": "bbGameplay.mp4",
+    "steamlink": "https://store.steampowered.com/app/1029020/BionicBlitz/",
+    "githublink": "",
+    "techused": "Unity & C# & Dreamlo & 3ds Max & After Effects & AdMob",
+    "role": "Full Game Programming & Animation Setup & Concept and Design & Cross Platform Build & AdMob Integration & Localisation Setup"
+  },
   {
     "id": 6,
-    "pageIntro" : "The Chicken and the Fox is the first of a series of childrens books. It is a joint collaboration between TopBox Studio and promising children's book author, Randol Taylor. & It is a multi-lingual children's book that weaves an informative narrative with an engaging story through an interactive journey that combines fun with learning, offering a delightful experience for young readers. & This app is seperated into 2 different projects.  An uploader project was created for storing assets and creating the actual content for each book. This project ensures that the art and content are kept separate from the main project, facilitating easier content management and enabling the production of multiple books using the same system.",
-    "title":   ["Taylors Tales", "Taylors Tales Uploader"],
-    "introText" : ["The main project is designed to manage and present each book in Unity. It processes a list of asset bundles for the specific book the user wants to read. & Below is a small snippet showcasing the main features of the book. There are 25 pages in total each with their own set of facts and interactables. The target platform for the project is Android and I phone.",
-     "The uploader project contains custom editor code that generates asset bundles from scene layouts, text elements and audio data.  These assets are stored in the persistent data folder where the main project reads them from.  Before the book is released, these assets will be placed on Azure Blob Storage."],
-       "infoText" : ["", ""],
-    "image": ["candfVid.mp4","BionicBlitzMainImg.jpg"],
-        "releasedate" : "",
-    "trailer" : "",
-    "gameplay" : "",
-        "steamlink" : "",
-    "githublink" : "",
-    "techused" : "",
-        "role" : "Full development of both projects. I did not design or create the graphics."
-
+    "pageIntro": "The Chicken and the Fox was meant to be the first in a series of multilingual children's books from Taylor's Tales, the company of children's author Randol Taylor, made in collaboration with Topbox Studio. In the end we only released one book, but the system we built for it was designed to handle many. & The book mixes educational elements into the story, so young readers have things to interact with as well as read. Each page has its own interactables and facts to find. & The app is split into two Unity projects, and that split is the heart of the engineering. The main project reads and presents books. The uploader, which I designed and built from scratch, handles all the content creation, so the art, page layouts, audio, paragraphs and page metadata all live there. The main project never touches raw assets and only ever reads finished asset bundles. Keeping them separate meant the main app stayed small, and the content pipeline could handle as many books as we wanted to ship.",
+    "title": [
+      "Taylor's Tales",
+      "Taylor's Tales Uploader"
+    ],
+    "introText": [
+      "The main project is the app the reader opens. It loads the asset bundles for whichever book the user picks and builds the pages on the fly from what's inside them. & The video shows a short walkthrough of the book, which has 25 pages, each with its own facts and interactables. It was built for Android and iOS.",
+      "The uploader is where the books are built, and it was entirely my design. I wrote custom Unity editor code that turns raw scene layouts, text and audio into finished asset bundles, along with the JSON metadata that tells the main project which bundle belongs to which page and where each paragraph goes. & During development the asset bundles were written to persistent data, and at release they were served from Azure Blob Storage. The point was to separate concerns. Artists and writers work in the uploader, and the main project stays lean and only reads finished, packaged content. I'd still take the same approach now, moving the heavy lifting into a build time tool so the pipeline outlasts the project."
+    ],
+    "infoText": [
+      "The main app is deliberately thin. On startup it reads the JSON manifest for the selected book, pulls the matching asset bundles from persistent data and builds each page at runtime, with the layout, art, audio, text and interactables all coming from the bundle. There's no book specific code in the main project. Adding a new title means dropping in a new set of bundles and a manifest, without rebuilding or redeploying the app. & Support for multiple languages runs off the same system. Each page's paragraphs are stored in the JSON metadata by language, so switching language is a manifest lookup rather than a content swap. The whole app is built for Android and iOS from a single Unity codebase.",
+      "The uploader is where most of the engineering is. I wrote custom Unity editor windows and inspectors that let a content author put a page together visually by dropping in the art, placing the interactables, attaching the audio and writing the paragraphs. They can then export the whole page as a single asset bundle with one click. & Behind the scenes, the editor code walks the scene, serialises the layout data, packs the referenced assets into a bundle and writes the matching JSON entry to the manifest. The manifest tracks which bundle belongs to which page, which language versions exist, and any page metadata the main app needs to build the page. & The pipeline is built around one simple rule. Anything the main app needs at runtime has to come from a bundle and a JSON entry, and nothing else. That rule is what would have let the system scale to a whole series without the main project growing at all."
+    ],
+    "image": [
+      "candfVid.mp4",
+      "BionicBlitzMainImg.jpg"
+    ],
+    "releasedate": "",
+    "trailer": "",
+    "gameplay": "",
+    "steamlink": "",
+    "githublink": "",
+    "techused": "Unity & C# & Unity Editor Scripting & Asset Bundles & JSON & Azure Blob Storage",
+    "role": [
+      "Full Project Architecture & Asset Bundle Pipeline & Custom Unity Editor Tooling & Page Construction System & Multilingual Support & Android and iOS Build",
+      "Original Concept and Design & Custom Editor Code & Asset Bundle Generation & JSON Metadata System & Content Authoring Workflow & Azure Blob Storage Integration"
+    ]
   },
-    {
+  {
     "id": 7,
-    "pageIntro" : "Crosswaves Intro",
+    "pageIntro": "Crosswaves Intro",
     "title": "Crosswaves",
-    "introText" : "",
-    "infoText" : "Crosswaves Info",
-  "image": "",
-    "releasedate" : "",
-    "trailer" : "",
-    "gameplay" : "",
-    "steamlink" : "",
-    "githublink" : "",
-    "techused" : "",
-        "role" : ""
-
+    "introText": "",
+    "infoText": "Crosswaves Info",
+    "image": "",
+    "releasedate": "",
+    "trailer": "",
+    "gameplay": "",
+    "steamlink": "",
+    "githublink": "",
+    "techused": "",
+    "role": ""
   },
-    {
+  {
     "id": 8,
-    "pageIntro" : "Macro Tracker info",
+    "pageIntro": "Macro Tracker info",
     "title": "Macro Tracker",
-    "introText" : "",
-    "infoText" : "Macro Tracker Info",
-  "image": ["BionicBlitzMainImg.jpg","BionicBlitzMainImg.jpg","BionicBlitzMainImg.jpg"],
-    "releasedate" : "",
-    "trailer" : "",
-    "gameplay" : "",
-    "steamlink" : "",
-    "githublink" : "",
-    "techused" : "",
-        "role" : ""
-
+    "introText": "",
+    "infoText": "Macro Tracker Info",
+    "image": [
+      "BionicBlitzMainImg.jpg",
+      "BionicBlitzMainImg.jpg",
+      "BionicBlitzMainImg.jpg"
+    ],
+    "releasedate": "",
+    "trailer": "",
+    "gameplay": "",
+    "steamlink": "",
+    "githublink": "",
+    "techused": "",
+    "role": ""
   },
-  
-    {
+  {
     "id": 9,
-    "pageIntro" : "Trick or Treat was to be the first of a series of festive themed local/online multiplayer shooter games. The setting is Halloween night and based around the concept of fireworks and eggs over guns and grenades. The goal is to destroy the other teams base, by throwing eggs at it.",
+    "pageIntro": "Trick or Treat was meant to be the first in a series of festive local multiplayer shooter games. It's set on Halloween night, with fireworks and eggs instead of guns and grenades. The goal is to destroy the other team's base by throwing eggs at it. & I built the whole game, and my business partner at Topbox Studio did the graphics.",
     "title": "Trick or Treat",
-    "introText" : "",
-    "infoText" : "This game contains a fully functioning 3D Ragdoll system and a complex pooling system. The architecture follows a state machine based interface which implements game state as well as Player and Ragdoll states. & The video below shows a clip of the local multiplayer shooting with the ragdoll physics in effect. & This game was abandoned due to the Covid-19 Pandemic and is currently archived.  I fully intend to complete this game at some point in the near future.",
-  "image": "",
-    "releasedate" : "",
-    "trailer" : "",
-    "gameplay" : "instaTorT.mp4",
-    "steamlink" : "",
-    "githublink" : "",
-    "techused" : "",
-        "role" : ""
-
+    "introText": "",
+    "infoText": "The game has a fully working 3D ragdoll system and an object pooling system. The architecture is built on a state machine interface that handles the game state as well as the player and ragdoll states. & The video below shows a clip of the local multiplayer shooting with the ragdoll physics in action. & The game was shelved when the COVID-19 pandemic hit, and it's now archived.",
+    "image": "",
+    "releasedate": "",
+    "trailer": "",
+    "gameplay": "instaTorT.mp4",
+    "steamlink": "",
+    "githublink": "",
+    "techused": "Unity & C# & Ragdoll Physics & Object Pooling & State Machines",
+    "role": "Full Game Development & Ragdoll System & Object Pooling & State Machine Architecture & Local Multiplayer"
   },
-    {
+  {
     "id": 10,
-    "pageIntro" : "This was a project I worked worked on solo during the Covid 19 Pandemic. It is inspired by my favorite game as a child : Street Fighter.",
+    "pageIntro": "This was a project I worked on solo during the COVID-19 pandemic. It's inspired by my favourite game as a child, Street Fighter. & I built everything in the game myself. The character graphics came from Mixamo.",
     "title": "3D Street Fighter",
-    "introText" : "",
-    "infoText" : "This game uses enemy and character scripts which both inherit from an interface named IEntity. The IEntity interface must implement 3 other interfaces named IAnimate, IControllable and IAttack. & This was a deep dive into interface based architecture. The choice to use an interface of interfaces makes it extremely easy to implement new features and develop enemy AI and player characters alongside each other with a very similar structure. This allows for easy bug fixing and scalability. & The project was abandoned when i was hired as a Junior Developer at Mesmerise Global Limited, my first ever professional developing job.",
-  "image": "",
-    "releasedate" : "",
-    "trailer" : "",
-    "gameplay" : "hacnNew.mp4",
-    "steamlink" : "",
-    "githublink" : "",
-    "techused" : "",
-        "role" : ""
-
+    "introText": "",
+    "infoText": "The player and enemy classes both implement an interface called IEntity, which itself extends three other interfaces: IAnimate, IControllable and IAttack. & I used this project to learn interface based architecture in depth. Building IEntity out of other interfaces made it very easy to add new features and to develop the enemy AI and player characters side by side with a similar structure. That made bugs easier to fix and the project easier to scale. & The project was abandoned when I was hired as a Junior Developer at Mesmerise Global Limited, my first professional development job.",
+    "image": "",
+    "releasedate": "",
+    "trailer": "",
+    "gameplay": "hacnNew.mp4",
+    "steamlink": "",
+    "githublink": "",
+    "techused": "Unity & C# & Mixamo",
+    "role": "Solo Development & Interface Based Architecture & Enemy AI & Combat System"
   },
-    {
+  {
     "id": 11,
-    "pageIntro" : "",
-    "title": "CoachCubeAI",
-    "introText" : "",
-    "infoText" : "",
-  "image": [],
-    "releasedate" : "",
-    "trailer" : "CoachCubeExplainerVideo.mp4",
-    "gameplay" : "",
-    "steamlink" : "",
-    "githublink" : "",
-    "techused" : "",
-        "role" : ""
-
+    "pageIntro": "I was the fourth person hired at Coach Cube, an AI fitness hardware startup of seven people, and I’ve been the lead front end developer since day one. In a team this size, being the lead also means being the only one, and doing whatever else the day needs. I was part of the early technical conversations. We debated the stack, built prototypes, and threw things out and started again until we landed on the right technologies. The front end has been mine from start to finish. & In my first week I started teaching myself solutions architecture so I could contribute properly to those decisions, and I’ve kept at it since. Knowing why a stack is shaped the way it is has made me a better engineer at every layer, including the ones I don’t work in day to day.",
+    "title": "Coach Cube",
+    "introText": "Lead front end developer at an AI fitness hardware startup, building the Unity 6 client, its real time data layer and the embedded React UI.",
+    "infoText": "The Coach Cube front end is a Unity 6 app on URP. It uses Zenject for dependency injection and a message broker pattern, so tracking, AI, hardware and UI never talk to each other directly and can each be tested on their own. Every system has its own assembly with explicit dependencies, which has kept the codebase clean as it’s grown. & The hardest problem has been the real time data layer. The client gets pose tracking data and workout events from the backend over Redis, using two of its features. Pub/Sub carries rep progress, which updates constantly, so losing the odd message doesn’t matter. Streams carry rep counts, which have to arrive. There’s also a WebSocket connection to the Vitruvian resistance hardware. Redis was new to me when I joined. I learned it from scratch, ran it locally in Docker and wired it into Unity through Zenject, so the rest of the codebase never has to know it’s there. & UniTask handles async throughout. ElevenLabs TTS gives the AI coach its voice, and a local cache keeps latency and costs down. The whole UI is a React app running inside an embedded Chromium browser. I chose that over Unity’s built in UI because it’s faster to iterate on and much nicer to work with, and I built that integration myself. & Outside Unity, I built and own an internal Vue 3 web app with Vite, Tailwind and Firebase. Our trainers use it to build workout templates and run sessions. It calls our Spring Boot backend over REST, which then streams the workout into Redis for the Unity client to pick up. I didn’t write the backend, but I worked closely on its design, especially the Redis event contracts.",
+    "additionalText": "My role also grew into product ownership. I owned the graphics pipeline and worked with our contract designers to get assets delivered. I also owned the internal web app that sends data between our backend and the Unity client. Neither of those is normally part of a front end role. I took them on because someone had to. & A startup at this stage doesn’t let you stay in your lane. If something needs to exist and nobody else is going to build it, you learn what you need and ship it. I love that pace. The part I’m proudest of is the detail, the small interactions and the polish that take ten times longer than the feature itself. & As we got closer to launch I moved into a Technical Account Manager role alongside development. I supported 30 to 40 live demos for investors and clients. I deployed the full stack on site, including the Docker services, the connection between the dashboard and the backend, and the Redis messaging. I also helped install and test the physical prototype, which went on to run around 300 user sessions. When something broke on a live unit I was the one who went to site, read the container logs and got it running again before the next demo. & From July 2026 I co-managed our first commercial partnership, a 16 week pilot with a premium workspace operator. I was a regular point of contact for their team and the link between them and our engineers. Watching real users struggle with something I built has made me a better developer.",
+    "image": [
+      "CoachCube/coach-cube-slide-1.jpg",
+      "CoachCube/coach-cube-slide-2.jpg",
+      "CoachCube/coach-cube-slide-3.jpg",
+      "CoachCube/coach-cube-slide-4.jpg",
+      "CoachCube/coach-cube-slide-5.jpg",
+      "CoachCube/coach-cube-slide-6.jpg"
+    ],
+    "releasedate": "",
+    "trailer": "CoachCubeExplainerVideo.mp4",
+    "gameplay": [
+      "CoachCube/arrival-walk-in.mp4",
+      "CoachCube/inside-the-cube.mp4",
+      "CoachCube/session-progress-walkthrough.mp4"
+    ],
+    "steamlink": "",
+    "githublink": "",
+    "techused": "Unity 6 & C# & Zenject & UniTask & Redis & Docker & WebSocket & ElevenLabs & Vue 3 & React & Spring Boot & Firebase",
+    "role": "Lead Front End Developer & Early Team Member & Unity / C# Development & Product Owner & Technical Account Manager & On Site Deployment & Content Creator",
+    "gameplayLabel": "My Claim to Fame",
+    "trailerLabel": "Promotional Video"
+  },
+  {
+    "id": 12,
+    "pageIntro": "RightScan is a mobile app that tells you whether a food product is vegan, vegetarian or halal. You scan the barcode and get a clear verdict for each diet, with the reason and the ingredient responsible. & It's strict by default. If the app isn't sure, it shows a warning rather than a green tick, because a wrong yes is worse than a cautious maybe. Diet preferences stay on the phone, and the app stores no names, emails or locations. It's currently in an Android beta that I'm testing in shops.",
+    "title": "RightScan",
+    "introText": "Scan a food barcode and get a vegan, vegetarian and halal verdict with the reason behind it.",
+    "additionalText": "RightScan is the most ambitious thing I've built with Claude Code, and the workflow is as much the project as the app. Before any code was written I wrote planning documents covering requirements, architecture, data model, API contracts and a roadmap split into phases and numbered tasks, each with its own \"done when\" test. Those documents are the source of truth over the code. & CLAUDE.md works as an operating manual for the agents. Each session starts by reading a short status file and a knowledge graph of the codebase, then only the docs its task points to. It ends with tests and CI green, the status file updated and one pull request on its own branch. In autopilot mode the agents work through the roadmap and merge their own pull requests once CI passes, stopping for anything that changes a verdict, costs money or fails twice. Agents even drive my test phone over USB to check the app on a real device, with strict rules about confirming which app is on screen before every input. & My role is product owner and architect. I set the rules, review the decisions, and do the real world testing with the beta on my phone. Every architecture decision is logged and numbered, and there are well over a hundred of them.",
+    "infoText": "The app is React Native with Expo and TypeScript. It makes one HTTPS call per scan, and the backend owns all the verdict logic, so rules can change without shipping a new app. Barcode scanning runs on the device, with check digit validation and two frame confirmation so a misread never reaches the server. & The backend is ASP.NET Core on .NET 10, running on Azure Container Apps with Azure SQL. It looks products up in Open Food Facts and its sister databases in parallel, with timeouts and caching, and translates foreign language ingredient lists through Azure Translator, caching every translation. & The verdict engine is pluggable. Vegan and vegetarian rules are declared in data, while halal has its own six step rule set. Rules match canonical ingredient IDs such as E471 rather than raw text, and every verdict carries reason codes and a ruleset version. Around 800 backend tests run against recorded real products, so CI never calls a live service. Every green build on main deploys to Azure automatically, and app updates ship over the air.",
+    "image": ["default.jpg"],
+    "releasedate": "",
+    "trailer": "",
+    "gameplay": "",
+    "steamlink": "",
+    "githublink": "",
+    "techused": "React Native & Expo & TypeScript & ASP.NET Core & .NET 10 & EF Core & Azure Container Apps & Azure SQL & Azure Translator & Open Food Facts & GitHub Actions & Claude Code",
+    "role": "Product Owner & Solutions Architecture & Spec and Roadmap & Agent Workflow Design & Real Device Testing & AI Assisted Development"
+  },
+  {
+    "id": 13,
+    "pageIntro": "Every year my friends and I run a Premier League sweepstake. Before the season starts, each of us picks three players to score and three to assist. Every player has Golden Boot odds (Isak was 8/1, for example), and your three picks' odds have to add up to at least 125/1. The same rule applies to assists. That stops everyone piling onto Haaland and makes the picks interesting. & Every season I build a website we all use to follow the race. This year it's a live leaderboard for 17 of us, with goals on one side and assists on the other, updated automatically all season.",
+    "title": "PL Sweepstake",
+    "introText": "A live goals and assists leaderboard for a season long Premier League sweepstake with friends.",
+    "additionalText": "This year's version was built with Claude Code. Before any code was written I wrote two documents: a CLAUDE.md describing the architecture, data rules and constraints, and a build brief splitting the work into phases, from scaffolding through to a final verification phase. Claude Code built it phase by phase, and I reviewed and tested each phase before moving on to the next. & My job was the decisions. I tested the data sources before picking one, and dropped the Fantasy Premier League API because its assists aren't the official numbers. When something didn't behave the way the docs said, I measured it and wrote the finding into CLAUDE.md, so every session started from the same facts.",
+    "infoText": "The site is a Blazor WebAssembly app on .NET 10, hosted on GitHub Pages. There's no server and no database. The browser only ever reads a stats file that ships with the site. & A small .NET console tool builds that file. It pulls per match goals and assists from ESPN and adds them up itself, because ESPN's season totals lag hours behind. Matches are cached as recent, unsettled or settled, so late stat corrections still get picked up and finished matches are never fetched again. Players are matched by ESPN ID, never by name. ESPN's data has two players named Igor Jesus and ten named Bruno Fernandes. & GitHub Actions runs the fetcher on a schedule and redeploys when the numbers change. GitHub's 15 minute schedule turned out to fire roughly every 49 minutes, so on match days a separate workflow checks every 5 minutes through the likely match windows. 86 tests cover the leaderboard maths, the ESPN parsing and a check that every pick maps to a real player, and they all run before every deploy.",
+    "image": ["PLSweepstake/sweepstake-leaderboard.jpg"],
+    "releasedate": "",
+    "trailer": "",
+    "gameplay": "",
+    "steamlink": "",
+    "livelink": "https://colmregan91.github.io/sweepstake/",
+    "embedlink": "https://colmregan91.github.io/sweepstake/",
+    "githublink": "https://github.com/colmregan91/sweepstake",
+    "techused": "C# & .NET 10 & Blazor WebAssembly & GitHub Actions & GitHub Pages & ESPN API & xUnit & Claude Code",
+    "role": "Concept and Rules & Spec and Build Plan & Data Source Research & AI Assisted Development & Automated Deployment & Testing"
+  },
+  {
+    "id": 14,
+    "pageIntro": "LifeBot is a tool I built for myself to stay organised. I hold the power button on my phone, say whatever I need to do, and it lands in the right to do list. It works from the lock screen, so there's no unlocking, opening an app or typing. & It keeps several lists and works out which one each item belongs in from what I said. If I start with the word calendar, it creates a calendar event instead, reading the day, time and length from the sentence.",
+    "title": "LifeBot",
+    "introText": "A voice controlled Android tool that turns anything I say into a to do item or a calendar event.",
+    "additionalText": "I'm a Unity and C# developer and had never written Kotlin or an Android app before this. I built it with Claude Code, set up as a mentor rather than a code generator. My CLAUDE.md asked it to explain Android concepts through Unity ones, so an Activity was a Scene and a StateFlow was a UnityEvent, and to explain the why behind every decision. & The work was split into milestones, and each one had to build, install and pass a test on my phone before the next one started. A handoff document recorded what the phone actually did in each session, the decisions made along the way and what was still open, so every new session picked up exactly where the last one stopped. I built the whole thing from VS Code and the terminal, without Android Studio.",
+    "infoText": "LifeBot registers itself as the phone's digital assistant, which is what lets a long press of the power button open it over the lock screen. It listens continuously, restarts the speech recognizer after every pause and joins the pieces together until I tap stop. It prefers Android's on device recognizer, so nothing I say leaves the phone, and the app doesn't even have internet permission. & The parsing is plain Kotlin with no Android code in it, so it can be unit tested on a PC. The command parser accepts loose phrasing and fuzzy matches list names, so small recognition mistakes still find the right list. A list guesser scores each item against the words already in each list and only files it when there's a clear winner. Anything it can't place goes to Miscellaneous. An event parser reads the day, time and duration for calendar entries. The three parsers are covered by 82 unit tests. & Some of the most useful work was finding out what Android won't allow. The assistant session never receives key events, so releasing the power button to stop recording is impossible. To qualify as an assistant the app also has to declare its own stub speech recognizer, so it has to pick the real one explicitly. Each finding went into the project docs so it was never relearned.",
+    "image": ["LifeBot/lifebot-1-listening.jpg", "LifeBot/lifebot-2-confirmed.jpg", "LifeBot/lifebot-3-calendar.jpg", "LifeBot/lifebot-4-lists.jpg"],
+    "sliderWidth": "600px",
+    "releasedate": "",
+    "trailer": "",
+    "gameplay": "",
+    "steamlink": "",
+    "githublink": "",
+    "techused": "Kotlin & Jetpack Compose & Material 3 & Room & Android Speech Recognition & VoiceInteractionService & Calendar Provider & JUnit & Claude Code",
+    "role": "Concept and Design & Solo Development & Android Platform Research & Parser and Test Design & AI Assisted Development"
   }
-
 ]
-
-

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "../imageslider.css";
 
-export default function ImageSlider({ images }) {
+export default function ImageSlider({ images, width }) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
@@ -14,7 +14,10 @@ export default function ImageSlider({ images }) {
 
   return (
     <div className="slider-wrapper">
-      <div className="slider-container">
+      <div
+        className="slider-container"
+        style={width ? { width, maxWidth: "90%" } : undefined}
+      >
         <div
           className="slider-track"
           style={{ transform: `translateX(-${currentIndex * 100}%)` }}

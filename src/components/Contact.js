@@ -1,4 +1,4 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import "../contact.css";
 import emailjs from "@emailjs/browser";
 
@@ -6,13 +6,13 @@ export default function Contact() {
   const details = [
     {
       icon: "images/address.png",
-      heading: "Address",
-      text: "151 Latchmere Road, London, SW112JY",
+      heading: "Location",
+      text: "London, UK · Irish",
     },
     {
       icon: "images/phone.png",
       heading: "Call",
-      text: "+15589 55488 55 / 00000000000",
+      text: "UK: +44 7424 194135 / IE: +353 86 060 4603",
     },
     {
       icon: "images/email.png",
@@ -22,12 +22,12 @@ export default function Contact() {
   ];
 
   const [status, SetStatus] = useState("idle");
-  const [errorMsg, setErrorMsg] = useState("");
   const formRef = useRef(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     SetStatus("loading");
+    formRef.current.time.value = new Date().toLocaleString();
 
     try {
       await emailjs.sendForm(
@@ -39,14 +39,17 @@ export default function Contact() {
       SetStatus("success");
       formRef.current.reset();
     } catch (err) {
-      setErrorMsg(err.message);
+      console.error("EmailJS send failed:", err);
       SetStatus("error");
     }
   };
 
+  useEffect(() => {
+    window.scrollTo({ top: 700, behavior: "smooth" });
+  }, []);
+
   return (
     <section className="contact-section">
-      {window.scrollTo({ top: 700, behavior: "smooth" })}
       <div className="contact-wrapper">
         {/* LEFT column */}
         <div className="contact-info">
@@ -70,13 +73,15 @@ export default function Contact() {
           onSubmit={(e) => handleSubmit(e)}
         >
           <div className="contact-form-row contact-two-col">
-            <input type="text" placeholder="Your Name" required />
-            <input type="email" placeholder="Your Email" required />
+            <input type="text" name="name" placeholder="Your Name" required />
+            <input type="email" name="email" placeholder="Your Email" required />
           </div>
 
-          <input type="text" placeholder="Subject" required />
+          <input type="text" name="title" placeholder="Subject" required />
 
-          <textarea rows="6" placeholder="Message" />
+          <textarea rows="6" name="message" placeholder="Message" required />
+
+          <input type="hidden" name="time" />
 
           <button
             type="submit"
@@ -86,9 +91,16 @@ export default function Contact() {
             {status === "loading" ? "Sending…" : "Send Message"}
           </button>
           {status === "success" && (
-            <p className="sent-message">Message sent ✔</p>
+            <p className="sent-message">
+              Thanks, your message has been sent. I'll get back to you soon.
+            </p>
           )}
-          {status === "error" && <p className="error-message">{errorMsg}</p>}
+          {status === "error" && (
+            <p className="error-message">
+              Sorry, something went wrong. Please email me directly at
+              colmregan91@gmail.com.
+            </p>
+          )}
         </form>
       </div>
     </section>

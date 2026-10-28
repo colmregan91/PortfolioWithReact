@@ -2,9 +2,9 @@
     {
     "id": 11,
     "projectCount" : 1,
-    "title": "CoachCubeAI",
-    "image": "COACHCUBEAI_ICON_DARK.png",
-    "filter": "CoachCubeAI",
+    "title": "Coach Cube",
+    "image": "CoachCube/coach-cube-logo.jpg",
+    "filter": "Coach Cube",
       "PageRoute": "/coachcube"
   },
   {
@@ -38,16 +38,16 @@
     "projectCount" : 1,
     "title": "Bionic Blitz",
     "image": "BionicBlitzMainImg.jpg",
-    "filter": "TopBox Studio (indie)",
+    "filter": "Topbox Studio (indie)",
       "PageRoute": "/bionicblitz"
   }
   ,
         {
     "id": 6,
     "projectCount" : 2,
-    "title": "Taylors Tales",
+    "title": "Taylor's Tales",
     "image": "candf.png",
-    "filter": "TopBox Studio (indie)",
+    "filter": "Topbox Studio (indie)",
       "PageRoute": "/taylorstales"
   } ,
         {
@@ -56,7 +56,8 @@
     "title": "Crosswaves",
     "image": "crosswaves4.png",
     "filter": "Solo Projects",
-      "PageRoute": "/crosswaves"
+      "PageRoute": "/crosswaves",
+      "hidden": true
   },
         {
     "id": 8,
@@ -64,7 +65,8 @@
     "title": "Macro Tracker",
     "image": "candf.png",
     "filter": "Solo Projects",
-      "PageRoute": "/macrotracker"
+      "PageRoute": "/macrotracker",
+      "hidden": true
   }
   ,
     
@@ -83,6 +85,30 @@
     "image": "streetfighter.png",
     "filter": "Archived",
       "PageRoute": "/3dstreetfighter"
+  },
+        {
+    "id": 12,
+    "projectCount" : 1,
+    "title": "RightScan",
+    "image": "RightScan/rightscan-logo.png",
+    "filter": "AI Assisted",
+      "PageRoute": "/rightscan"
+  },
+        {
+    "id": 13,
+    "projectCount" : 1,
+    "title": "PL Sweepstake",
+    "image": "PLSweepstake/sweepstake-logo.jpg",
+    "filter": "AI Assisted",
+      "PageRoute": "/plsweepstake"
+  },
+        {
+    "id": 14,
+    "projectCount" : 1,
+    "title": "LifeBot",
+    "image": "LifeBot/lifebot-logo.png",
+    "filter": "AI Assisted",
+      "PageRoute": "/lifebot"
   }
 
 ]

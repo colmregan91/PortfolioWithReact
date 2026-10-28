@@ -1,7 +1,6 @@
 import React from "react";
 import "../styles.css";
-import ProjectInfo from "./ProjectInfo";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 export default function ProjectCard({ project }) {
   const handleImageLoadError = (e) => {
     e.target.src = "images/default.jpg";

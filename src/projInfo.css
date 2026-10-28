@@ -21,38 +21,42 @@
 }
 
 .introduction {
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.25rem 0;
   text-align: justify;
   background: radial-gradient(ellipse at center, #1a1a2e 0%, #1a1a2e 52%, transparent 100%);
-  padding: 2.5rem;
+  padding: 1rem;
 }
 
 .introduction p {
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.6rem 0;
 }
 
 .introduction + .title,
 .introduction + .project-details-row,
 .project-info + .title,
 .project-info + .introduction {
-  margin-top: 2rem;
+  margin-top: 0.5rem;
 }
 
 .technical-info {
   background: radial-gradient(ellipse at center, #1a1a2e 0%, #1a1a2e 52%, transparent 100%);
-  padding: 2.5rem;
-  margin-bottom: 2rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .technical-info p {
-  margin: 0 0 1rem 0;
+  margin: 0 0 0.6rem 0;
   text-align: justify;
 }
 
 .media-section {
   background: radial-gradient(ellipse at center, #1a1a2e 0%, #1a1a2e 52%, transparent 100%);
-  padding: 2.5rem;
-  margin-bottom: 2rem;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.project-details-row .media-section {
+  margin-bottom: 0;
 }
 
 video,
@@ -62,58 +66,134 @@ video,
   border-radius: 8px;
 }
 
+/* Coach Cube slides have the border drawn around the picture inside the image */
+.project-details-row img.slide-image[src*="CoachCube/"] {
+  border: none;
+}
+
+.media-section video {
+  display: block;
+  margin: 0;
+  width: 90%;
+  height: 500px;
+  object-fit: contain;
+}
+
+/* Live site embedded in place of the image slider (embedlink in projectsInfo.json) */
+.site-embed {
+  display: block;
+  width: 100%;
+  height: 450px;
+  margin: 0 auto;
+  border: 2px solid rgba(100, 255, 218, 0.3);
+  border-radius: 8px;
+  background: #14171a;
+}
+
+/* Several videos side by side (gameplay given as an array in projectsInfo.json) */
+.video-row {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.media-section .video-row video {
+  width: auto;
+  max-width: calc((100% - 2rem) / 3);
+  height: 500px;
+}
+
+.video-details-wrapper {
+  width: 75%;
+  margin: 0 auto;
+}
+
+.video-details-wrapper .media-section video {
+  width: 100%;
+  margin: 0;
+}
+
 /* ----------  PROJECT DETAILS ROW  ---------- */
 
 .project-details-row {
   display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  gap: 20px;
-  margin-bottom: 1.5rem;
-  margin-top: 5rem;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+  margin-bottom: 0.5rem;
+  margin-top: 0.75rem;
 }
 
 .project-info {
-  flex: 1 1 40%;
   display: flex;
   flex-direction: column;
   background: radial-gradient(ellipse at center, #1a1a2e 0%, #1a1a2e 52%, transparent 100%);
-  padding: 2.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 0 0 8px 8px;
 }
 
-.project-info h3 {
-  margin: 0 0 0.5rem;
+.details-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0;
+}
+
+.detail-tag {
+  background: rgba(100, 255, 218, 0.08);
+  border: 1px solid rgba(100, 255, 218, 0.25);
+  border-radius: 4px;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
   text-align: center;
-}
-
-.project-info li {
-  list-style: none;
-  margin-bottom: 2rem;
-  margin-right: 5rem;
   display: flex;
   flex-direction: column;
-  text-align: center;
+  gap: 0.2rem;
 }
 
-.project-info li > strong {
+.detail-tag strong {
+  font-size: 0.75rem;
   font-weight: 600;
-  margin-bottom: 4px;
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
-.project-info h2 {
-  margin: 0 0 1.5rem;
-  text-align: center;
-}
-
-.project-info ul {
+.detail-links-row {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 0.5rem;
-  padding-left: 1.2rem;
-  margin: 0;
-  font-size: 1rem;
-  line-height: 1.4;
-  text-align: left;
+  flex-basis: 100%;
+}
+
+.role-grid-item {
+  flex-basis: 100%;
+  white-space: normal;
+}
+
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.role-tag {
+  background: rgba(100, 255, 218, 0.08);
+  border: 1px solid rgba(100, 255, 218, 0.25);
+  border-radius: 4px;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  text-align: center;
 }
 
 .project-info li strong {
@@ -138,5 +218,14 @@ video,
     width: 100%;
     margin-left: 0;
     height: auto;
+  }
+
+  .video-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .media-section .video-row video {
+    max-width: 100%;
   }
 }

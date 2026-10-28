@@ -25,7 +25,7 @@ export default function Footer() {
             <a href="https://www.linkedin.com/in/colmregan/">
               <img
                 src="images/linkedin.png"
-                alt="Descriptive Text"
+                alt="LinkedIn Logo"
                 style={{ width: "44px", height: "44px", objectFit: "contain" }}
               />
             </a>

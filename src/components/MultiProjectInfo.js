@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../projInfo.css";
 
 export default function MultiProjectInfo({
@@ -7,9 +7,12 @@ export default function MultiProjectInfo({
   category,
 }) {
   const numArray = Array.from({ length: projectCount }, (_, i) => i);
+  useEffect(() => {
+    window.scrollTo({ top: 700, behavior: "smooth" });
+  }, []);
+
   return (
     <div>
-      {window.scrollTo({ top: 700, behavior: "smooth" })}
       <div className="introduction">
         <h1 className="title">Introduction</h1>
         {projectInfo.pageIntro.split(" & ").map((para, i) => (
@@ -43,11 +46,10 @@ export default function MultiProjectInfo({
           </div>
 
           <div className="project-details-row">
+            <div className="video-details-wrapper">
             <div className="media-section">
               <video
                 controls
-                width="100%"
-                height="50%"
                 src={`videos/${projectInfo.image[index]}`}
                 type="video/mp4"
               >
@@ -56,56 +58,70 @@ export default function MultiProjectInfo({
             </div>
 
             <div className="project-info">
-              <h2>Project Details</h2>
-              <ul>
-                <li>
-                  <strong>Category</strong>
-                  <span>{category}</span>
-                </li>
-
+              <div className="details-grid">
                 {projectInfo.releasedate && (
-                  <li>
+                  <div className="detail-tag">
                     <strong>Released</strong>
                     <span>{projectInfo.releasedate}</span>
-                  </li>
+                  </div>
                 )}
-
                 {projectInfo.steamlink && (
-                  <li>
-                    <strong>Steam Link </strong>
-                    <a
-                      href={projectInfo.steamlink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Click here
-                    </a>
-                  </li>
+                  <div className="detail-tag">
+                    <strong>Steam</strong>
+                    {projectInfo.steamlink.startsWith("http") ? (
+                      <a href={projectInfo.steamlink} target="_blank" rel="noopener noreferrer">Link</a>
+                    ) : (
+                      <span>{projectInfo.steamlink}</span>
+                    )}
+                  </div>
                 )}
-
                 {projectInfo.githublink && (
-                  <li>
-                    <strong>Github Link </strong>
-                    <a
-                      href={projectInfo.githublink}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Click here
-                    </a>
-                  </li>
+                  <div className="detail-tag">
+                    <strong>GitHub</strong>
+                    {projectInfo.githublink.startsWith("http") ? (
+                      <a href={projectInfo.githublink} target="_blank" rel="noopener noreferrer">Link</a>
+                    ) : (
+                      <span>{projectInfo.githublink}</span>
+                    )}
+                  </div>
                 )}
                 {projectInfo.techused && (
-                  <li>
-                    <strong>Technologies Used</strong> {projectInfo.techused}
-                  </li>
+                  projectInfo.techused.split(" & ").length > 1 ? (
+                    <div className="detail-tag role-grid-item">
+                      <strong>Tech</strong>
+                      <div className="tech-grid">
+                        {projectInfo.techused.split(" & ").map((t, i) => (
+                          <span key={i} className="role-tag">{t.trim()}</span>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="detail-tag">
+                      <strong>Tech</strong>
+                      <span>{projectInfo.techused}</span>
+                    </div>
+                  )
                 )}
-                {projectInfo.role && (
-                  <li>
-                    <strong>My Role</strong> {projectInfo.role}
-                  </li>
-                )}
-              </ul>
+                {projectInfo.role && (() => {
+                  const role = Array.isArray(projectInfo.role) ? projectInfo.role[index] : projectInfo.role;
+                  return role.split(" & ").length > 1 ? (
+                    <div className="detail-tag role-grid-item">
+                      <strong>My Role</strong>
+                      <div className="role-grid">
+                        {role.split(" & ").map((r, i) => (
+                          <span key={i} className="role-tag">{r.trim()}</span>
+                        ))}
+                      </div>
+                    </div>
+                  ) : (
+                    <div className="detail-tag">
+                      <strong>My Role</strong>
+                      <span>{role}</span>
+                    </div>
+                  );
+                })()}
+              </div>
+            </div>
             </div>
           </div>
 

@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../styles.css";
 import ProjectCard from "./ProjectCard";
-export default function ProjectGrid({ projects = [] }) {
+export default function ProjectGrid({ projects: allProjects = [] }) {
+  const projects = allProjects.filter((p) => !p.hidden);
   const [searchTerm, setSearchTerm] = useState("");
   const [filter, setFilter] = useState("All");
 

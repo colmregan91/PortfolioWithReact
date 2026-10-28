@@ -8,7 +8,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import ProjectInfo from "./components/ProjectInfo";
 import MultiProjectInfo from "./components/MultiProjectInfo";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { HashRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Backtotop from "./components/Backtotop";
 function App() {
   const [projects, setProjects] = useState([]);

@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import "../styles.css";
 
+const roles = ["Lead Unity Developer", "Technical Account Manager", "Game Developer"];
+
 export default function Header() {
-  const roles = ["Unity 3D Engineer", "React Web Developer", "Game Developer"];
   const [roleIndex, setRoleIndex] = useState(0);
   const [text, setText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
@@ -25,7 +26,7 @@ export default function Header() {
     }, isDeleting ? 50 : 100);
 
     return () => clearTimeout(timeout);
-  }, [text, isDeleting, roleIndex, roles]);
+  }, [text, isDeleting, roleIndex]);
 
   return (
     <header className="header">
