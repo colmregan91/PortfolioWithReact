@@ -59,16 +59,6 @@
       "PageRoute": "/crosswaves",
       "hidden": true
   },
-        {
-    "id": 8,
-    "projectCount" : 1,
-    "title": "Macro Tracker",
-    "image": "candf.png",
-    "filter": "Solo Projects",
-      "PageRoute": "/macrotracker",
-      "hidden": true
-  }
-  ,
     
         {
     "id": 9,

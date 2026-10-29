@@ -162,25 +162,6 @@
     "role": ""
   },
   {
-    "id": 8,
-    "pageIntro": "Macro Tracker info",
-    "title": "Macro Tracker",
-    "introText": "",
-    "infoText": "Macro Tracker Info",
-    "image": [
-      "BionicBlitzMainImg.jpg",
-      "BionicBlitzMainImg.jpg",
-      "BionicBlitzMainImg.jpg"
-    ],
-    "releasedate": "",
-    "trailer": "",
-    "gameplay": "",
-    "steamlink": "",
-    "githublink": "",
-    "techused": "",
-    "role": ""
-  },
-  {
     "id": 9,
     "pageIntro": "Trick or Treat was meant to be the first in a series of festive local multiplayer shooter games. It's set on Halloween night, with fireworks and eggs instead of guns and grenades. The goal is to destroy the other team's base by throwing eggs at it. & I built the whole game, and my business partner at Topbox Studio did the graphics.",
     "title": "Trick or Treat",
@@ -246,7 +227,8 @@
     "introText": "Scan a food barcode and get a vegan, vegetarian and halal verdict with the reason behind it.",
     "additionalText": "RightScan is the most ambitious thing I've built with Claude Code, and the workflow is as much the project as the app. Before any code was written I wrote planning documents covering requirements, architecture, data model, API contracts and a roadmap split into phases and numbered tasks, each with its own \"done when\" test. Those documents are the source of truth over the code. & CLAUDE.md works as an operating manual for the agents. Each session starts by reading a short status file and a knowledge graph of the codebase, then only the docs its task points to. It ends with tests and CI green, the status file updated and one pull request on its own branch. In autopilot mode the agents work through the roadmap and merge their own pull requests once CI passes, stopping for anything that changes a verdict, costs money or fails twice. Agents even drive my test phone over USB to check the app on a real device, with strict rules about confirming which app is on screen before every input. & My role is product owner and architect. I set the rules, review the decisions, and do the real world testing with the beta on my phone. Every architecture decision is logged and numbered, and there are well over a hundred of them.",
     "infoText": "The app is React Native with Expo and TypeScript. It makes one HTTPS call per scan, and the backend owns all the verdict logic, so rules can change without shipping a new app. Barcode scanning runs on the device, with check digit validation and two frame confirmation so a misread never reaches the server. & The backend is ASP.NET Core on .NET 10, running on Azure Container Apps with Azure SQL. It looks products up in Open Food Facts and its sister databases in parallel, with timeouts and caching, and translates foreign language ingredient lists through Azure Translator, caching every translation. & The verdict engine is pluggable. Vegan and vegetarian rules are declared in data, while halal has its own six step rule set. Rules match canonical ingredient IDs such as E471 rather than raw text, and every verdict carries reason codes and a ruleset version. Around 800 backend tests run against recorded real products, so CI never calls a live service. Every green build on main deploys to Azure automatically, and app updates ship over the air.",
-    "image": ["default.jpg"],
+    "image": ["RightScan/rightscan-1-home.jpg", "RightScan/rightscan-2-settings.jpg", "RightScan/rightscan-3-scanner.jpg", "RightScan/rightscan-4-vegetarian.jpg", "RightScan/rightscan-5-vegan.jpg", "RightScan/rightscan-6-halal.jpg", "RightScan/rightscan-7-ingredients.jpg", "RightScan/rightscan-8-nutrition.jpg", "RightScan/rightscan-9-history.jpg"],
+    "sliderWidth": "600px",
     "releasedate": "",
     "trailer": "",
     "gameplay": "",
