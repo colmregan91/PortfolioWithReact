@@ -27,8 +27,8 @@
       "Crypto Rush"
     ],
     "introText": [
-      "Bull Run started as a Unity Asset Store downhill ride template. I took it apart, kept what was worth keeping and rebuilt the rest to fit what the arcade needed. On a project like this, deciding what to keep and what to throw out is half the work. & You can see the original template here: [LINK] https://assetstore.unity.com/packages/templates/packs/downhill-ride-game-template-232870",
-      "Crypto Connect is a tile based puzzle game where players link tiles with their mouse to score points. It also started life as a Unity Asset Store bundle, but the brief was different this time. I had to strip it down and run it as a single player game in its own scene inside the metaverse, with no networking. & You can see the original template here: [LINK] https://assetstore.unity.com/packages/templates/packs/connect-game-template-232880",
+      "Bull Run started as a Unity Asset Store downhill ride template. I took it apart, kept what was worth keeping and rebuilt the rest to fit what the arcade needed. On a project like this, deciding what to keep and what to throw out is half the work. & To see the original template, [LINK] https://assetstore.unity.com/packages/templates/packs/downhill-ride-game-template-232870",
+      "Crypto Connect is a tile based puzzle game where players link tiles with their mouse to score points. It also started life as a Unity Asset Store bundle, but the brief was different this time. I had to strip it down and run it as a single player game in its own scene inside the metaverse, with no networking. & To see the original template, [LINK] https://assetstore.unity.com/packages/templates/packs/connect-game-template-232880",
       "Crypto Rush is the one I owned from start to finish, covering the design, gameplay and networking. The brief was open, so the build was mine to shape. & The video shows the game from two angles: the player mid run, and an observer watching live from somewhere else in the metaverse. That second view is the spectator networking at work."
     ],
     "infoText": [

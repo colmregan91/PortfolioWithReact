@@ -229,3 +229,13 @@ video,
     max-width: 100%;
   }
 }
+
+.inline-link {
+  color: #ff79c6;
+  font-size: 0.9em;
+  text-decoration: none;
+}
+
+.inline-link:hover {
+  text-decoration: underline;
+}

@@ -31,11 +31,12 @@ export default function MultiProjectInfo({
                   <>
                     {para.slice(0, para.indexOf("[LINK]")).trim()}{" "}
                     <a
+                      className="inline-link"
                       href={para.slice(para.indexOf("[LINK]") + 6).trim()}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      {para.slice(para.indexOf("[LINK]") + 6).trim()}
+                      click here
                     </a>
                   </>
                 ) : (
