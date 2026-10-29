@@ -37,7 +37,7 @@ function App() {
           <nav>
             <ul>
               <li>
-                <Link to={homePath}>Home</Link>
+                <Link to={homePath}>Projects</Link>
               </li>
               <li>
                 <Link to={aboutPath}>About</Link>

@@ -115,9 +115,9 @@ export default function About() {
             site issues can be fixed without escalating to an engineer.
           </p>
           <p>
-            That mix is what I do best. I'm a developer first, but I'm just as
-            comfortable in front of a client as in the codebase. Seeing real
-            people use what you've built changes how you build the next thing.
+            That mix is what I do best. I'm as comfortable in front of clients
+            and crowds of people as I am in the codebase, and seeing real people
+            use what you've built changes how you build the next thing.
           </p>
         </div>
       </div>

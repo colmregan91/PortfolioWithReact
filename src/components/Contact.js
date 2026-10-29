@@ -31,7 +31,7 @@ export default function Contact() {
 
     try {
       await emailjs.sendForm(
-        "service_wwlfyzt",
+        "service_t55p1yt",
         "template_goebgxu",
         formRef.current,
         "oH6Nx06dXvHxUOBOd"
