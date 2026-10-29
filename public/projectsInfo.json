@@ -20,7 +20,7 @@
   },
   {
     "id": 2,
-    "pageIntro": "At Bloktopia, one of my main responsibilities was building Blok Arcade, a hub of hyper casual games for the metaverse with networking handled through Photon Fusion. & Two of the three launch titles started life as Unity Asset Store bundles that I took apart and rebuilt to fit Bloktopia's world. I designed and built the third, Crypto Rush, from scratch. & Across all three, the networking was the real engineering challenge. I built a custom synchronisation pattern for the arcade that kept traffic low and let players near a game watch scores and progress update in real time.",
+    "pageIntro": "Bloktopia is a crypto-focused metaverse set inside a virtual skyscraper of 21 floors, a nod to Bitcoin's 21 million coin supply. It was built as a place where people could learn about crypto, meet up, play games and own virtual real estate. & At Bloktopia, one of my main responsibilities was building Blok Arcade, a hub of hyper casual games for the metaverse with networking handled through Photon Fusion. & Two of the three launch titles started life as Unity Asset Store bundles that I took apart and rebuilt to fit Bloktopia's world. I designed and built the third, Crypto Rush, from scratch. & Across all three, the networking was the real engineering challenge. I built a custom synchronisation pattern for the arcade that kept traffic low and let players near a game watch scores and progress update in real time.",
     "title": [
       "Bull Run",
       "Crypto Connect (Hex Game)",
