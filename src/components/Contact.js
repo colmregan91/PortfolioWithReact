@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import "../contact.css";
 import emailjs from "@emailjs/browser";
+import { scrollToPageTop } from "../scrollPositions";
 
 export default function Contact() {
   const details = [
@@ -45,7 +46,7 @@ export default function Contact() {
   };
 
   useEffect(() => {
-    window.scrollTo({ top: 700, behavior: "smooth" });
+    scrollToPageTop();
   }, []);
 
   return (

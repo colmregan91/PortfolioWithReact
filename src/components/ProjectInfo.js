@@ -1,10 +1,11 @@
 import React, { useEffect } from "react";
 import "../projInfo.css";
 import Imageslider from "./Imageslider";
+import { scrollToProjectContent } from "../scrollPositions";
 
 export default function ProjectInfo({ projectInfo, category }) {
   useEffect(() => {
-    window.scrollTo({ top: 700, behavior: "smooth" });
+    scrollToProjectContent();
   }, []);
 
   return (

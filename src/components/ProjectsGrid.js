@@ -1,10 +1,15 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../styles.css";
 import ProjectCard from "./ProjectCard";
+import { scrollToPageTop } from "../scrollPositions";
 export default function ProjectGrid({ projects: allProjects = [] }) {
   const projects = allProjects.filter((p) => !p.hidden);
   const [searchTerm, setSearchTerm] = useState("");
   const [filter, setFilter] = useState("All");
+
+  useEffect(() => {
+    scrollToPageTop();
+  }, []);
 
   const filters = ["All", ...new Set(projects.map((p) => p.filter))];
 

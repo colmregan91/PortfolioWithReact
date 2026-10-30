@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import "../projInfo.css";
 import "../about.css";
+import { scrollToPageTop } from "../scrollPositions";
 
 export default function About() {
   const skills = [
@@ -24,7 +25,7 @@ export default function About() {
   ];
 
   useEffect(() => {
-    window.scrollTo({ top: 700, behavior: "smooth" });
+    scrollToPageTop();
   }, []);
 
   return (

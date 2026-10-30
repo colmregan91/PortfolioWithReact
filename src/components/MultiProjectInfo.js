@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "../projInfo.css";
+import { scrollToProjectContent } from "../scrollPositions";
 
 export default function MultiProjectInfo({
   projectInfo,
@@ -8,7 +9,7 @@ export default function MultiProjectInfo({
 }) {
   const numArray = Array.from({ length: projectCount }, (_, i) => i);
   useEffect(() => {
-    window.scrollTo({ top: 700, behavior: "smooth" });
+    scrollToProjectContent();
   }, []);
 
   return (
