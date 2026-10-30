@@ -81,7 +81,7 @@ export default function About() {
             of code to store submission. We shipped Bionic Blitz to Steam and
             Android, and built The Chicken and the Fox, an interactive Unity
             children's book, in collaboration with author Randol Taylor's
-            company, Taylor's Tales.
+            company, Taylor's Fables and Animal Tails.
           </p>
           <p>
             Then I joined Mesmerise Global as a Unity developer working on

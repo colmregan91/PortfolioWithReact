@@ -122,7 +122,7 @@ Each entry controls the card grid and routing:
 | 3 | Token Tickers | `/tokentickers` | Single |
 | 4 | BlokBuster | `/blokbuster` | Single |
 | 5 | Bionic Blitz | `/bionicblitz` | Single |
-| 6 | Taylor's Tales | `/taylorstales` | Multi (2) |
+| 6 | Taylor's Fables and Animal Tails | `/taylorstales` | Multi (2) |
 | 7 | Crosswaves | `/crosswaves` | Single |
 | 8 | Macro Tracker | `/macrotracker` | Single |
 | 9 | Trick or Treat | `/trickortreat` | Single |
